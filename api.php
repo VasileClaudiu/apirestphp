@@ -364,7 +364,9 @@ switch ($method) {
 			$product->price = $data->price;
 			$product->description = $data->description;
 			$product->category_id = $data->category_id;
-			 
+			
+			//var_dump($product->id);
+			//die();			
 			// update the product
 			if($product->update()){
 			 
@@ -411,7 +413,7 @@ switch ($method) {
 	    http_response_code(200);
 	 
 	    // tell the user
-	    echo json_encode(array("message" => "Product was deleted."));
+		echo json_encode(array("message" => "Product was deleted."));
 	}
 	 
 	// if unable to delete the product
@@ -426,7 +428,4 @@ switch ($method) {
 
     break;
 }
-
-
-
 ?>

@@ -207,7 +207,7 @@ ul#myTab{
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-primary" onclick="product_update($('#product_id').val())">Save changes</button>
             </div>
           </div>
         </div>
@@ -236,6 +236,8 @@ ul#myTab{
             });
         });
         function product_view(id){
+            $("table#records_table_product_view").empty();
+            $("table#records_table_product_view").html("<th>Category Name</th><th>Id</th><th>Product Name</th><th>Description</th><th>Price</th><th>Category Id</th>");
             alert("Mmmm-"+id);
             $.get( "http://localhost/phpapi/api.php?id="+id, function( data ) {
                 //alert(JSON.stringify(data));
@@ -247,30 +249,49 @@ ul#myTab{
             });
         }
         function product_edit(id){
+            $("table#records_table_product_view").empty();
+            $("table#records_table_product_view").html("<th>Category Name</th><th>Id</th><th>Product Name</th><th>Description</th><th>Price</th><th>Category Id</th>");
             alert("Mmmm-"+id);
             $.get( "http://localhost/phpapi/api.php?id="+id, function( data ) {
                 //alert(JSON.stringify(data));
                 $('<tr>').html(
-                    "<td><input type='text' value="+data.category_name + " /></td><td><input type='text' value=" + data.id + " /></td><td><input type='text' value=" + data.name + " /></td><td><input type='text' value=" + data.description + " /></td><td><input type='text' value=" + data.price + " /></td><td><input type='text' value=" + data.category_id+" /></td>"
+                    "<td><input type='text' name='category_name' id='category_name' value='"+data.category_name + "' /></td><td><input type='text' name='id' id='product_id' value=" + data.id + " /></td><td><input type='text' name='product_name' id='product_name' value='" + data.name + "' /></td><td><input type='text' name='product_description' id='product_description' value='" + data.description + "' /></td><td><input type='text' name='product_price' id='product_price' value=" + data.price + " /></td><td><input type='text' name='category_id' id='category_id' value=" + data.category_id+" /></td>"
                 ).appendTo('table#records_table_product_view');
                 //alert(item.category_name);
                 $('#productsingle').modal('show');
             });
         }
+        function product_update(id){
+            if( typeof id !== 'undefined' ){
+            alert("Product Updated!!"+id);
+            data={id: $( "#product_id").val(),name: $( "#product_name").val(),price: $( "#product_price").val(),description: $( "#product_description").val(),category_id: $( "#category_id").val()};
+            alert(JSON.stringify(data));
+            $.post( "http://localhost/phpapi/api.php",JSON.stringify(data));
+            $('#productsingle').modal('hide'); 
+            window.location.reload();
+            } else {
+               $('#productsingle').modal('hide'); 
+            }
+        }
         function product_delete(id){
             alert("Mmmm-"+id);
-            datadel = {id: id };
-            alert(JSON.stringify(datadel));
             $.ajax({ 
                 url: 'http://localhost/phpapi/api.php',
-                data: JSON.stringify(datadel),
-                dataType: 'JSON',
-                type: 'DELETE', 
+                data: JSON.stringify({id: id }),
+                dataType: 'html',
+                type: 'DELETE',
+                cache: false,
                 contentType: "application/json; charset=utf-8",
-                success: function( res ) {
-                alert(JSON.stringify(res));
+                success: function( msg ) {
+                alert(JSON.stringify(msg));
+                window.location.reload();
+                },
+                error: function(msg){
+                    alert("failure");
+                    alert(JSON.stringify(msg));
                 }
             });
+
         }
     </script>
 </footer>
