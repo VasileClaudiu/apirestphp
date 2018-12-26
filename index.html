@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+<style>
+.wrapper{
+    padding-top: 4.5rem;
+}
+body {
+  min-height: 90vh;
+  position: relative;
+  background-color: silver;
+}
+footer{
+    height: 10vh;
+    background-color: #3d3780;
+    position: absolute;
+    color: grey;
+    bottom: 0;
+    top: 100%;
+    display:flex;
+    align-items:center;
+}
+.tab-pane.fade#home{
+    background-color: #3d3780;
+    color: yellow;
+    padding: 8px;
+}
+.tab-pane.fade#profile{
+    background-color: grey;
+    color: yellow;
+    padding: 8px;
+}
+.tab-pane.fade#contact{
+    background-color: #3d3780;
+    color: yellow;
+    padding: 8px;
+}
+#collapseExample .card.card-body{
+    background-color: #3d3780;
+    color: yellow;
+    padding: 8px;
+}
+ul#myTab{
+    background-color: #3d3780;
+    color: yellow;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+              
+    <div class="wrapper">
+        <div class="container" role="main">
+            <div class="row">   <!--start row-->
+                <div class="well col-md-6 offset-md-3"> <!--start well-->
+                    <div class="card"> <!--start card-->
+                        <div class="card-header">
+                            <h1>This is a test title</h1>
+                        </div>
+                        <div class="card-body">
+                            <h1>This is a test</h1>
+                            <div class="text-center">
+                                <p>This is a body test</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <h1>This is a test-footer</h1>
+                        </div>
+                    </div> <!--end card-->
+                </div> <!--end well-->
+            </div> <!--end row-->
+            <div class="row"> <!--start row-->
+                <div class="well col-md-6 offset-md-3"> <!--start well-->
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Raw denim you probably haven't heard of them jean shorts Austin. 
+                            <div class="row col-md-12">
+                                <div class="form-group">
+                                    <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="display:inline-block">
+                                    Launch demo modal
+                                </button>
+                                </div>
+                                <div class="form-group" style="margin-left:5px">
+                                    <p>
+                                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="display:inline-block">
+                                        Link with href
+                                    </a>
+                                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"  style="display:inline-block">
+                                        Button with data-target
+                                    </button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:-25px;">
+                                    <div class="collapse col-md-12" id="collapseExample">
+                                    <div class="card card-body">
+                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    
+                                    <div class="text-center">
+                                    <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />      
+                                    </div>
+                                    </div>
+                                    </div> 
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+                    </div>
+                    <div id="apiresult"><table class="table" id="records_table"><th>Category Name</th><th>Id</th><th>Product Name</th><th>Description</th><th>Price</th><th>Category Id</th><th>Action</th></table></div>
+                </div> <!--end well-->
+            </div> <!--end row-->
+        </div>
+    </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+               <div class="text-center">
+                <img src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />      
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> <!--end Modal -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="productsingle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal Product Single</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive" id="apiresult_product_view"><table class="table" id="records_table_product_view"><th>Category Name</th><th>Id</th><th>Product Name</th><th>Description</th><th>Price</th><th>Category Id</th></table></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div> <!--end Modal -->
+</body>
+<footer class="container-fluid">
+    <div class="mx-auto my-auto">Copyright - Power by Meserie - &copy;2018</div>
+    <script  src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //alert("S-a facut!!!");
+            $.get( "http://localhost/phpapi/api.php", function( data ) {
+            $.each(data, function(i, item) {
+                $('<tr>').html(
+                    "<td>"+item.category_name + "</td><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.description + "</td><td>" + item.price + "</td><td>" + item.category_id+"</td><td><button class='btn btn-success' onclick='product_view("+item.id+");'>View</button><button class='btn btn-primary' onclick='product_edit("+item.id+");'>Edit</button><button class='btn btn-danger' onclick='product_delete("+item.id+");'>Delete</button></td>"
+                ).appendTo('table#records_table');
+                //alert(item.category_name);
+            });
+            //$( "#apiresult" ).html( "TEESSSST");
+            alert(JSON.stringify(data));
+            //alert( "Load was performed." );
+            });
+        });
+        function product_view(id){
+            alert("Mmmm-"+id);
+            $.get( "http://localhost/phpapi/api.php?id="+id, function( data ) {
+                //alert(JSON.stringify(data));
+                $('<tr>').html(
+                    "<td>"+data.category_name + "</td><td>" + data.id + "</td><td>" + data.name + "</td><td>" + data.description + "</td><td>" + data.price + "</td><td>" + data.category_id+"</td>"
+                ).appendTo('table#records_table_product_view');
+                //alert(item.category_name);
+                $('#productsingle').modal('show');
+            });
+        }
+        function product_edit(id){
+            alert("Mmmm-"+id);
+            $.get( "http://localhost/phpapi/api.php?id="+id, function( data ) {
+                //alert(JSON.stringify(data));
+                $('<tr>').html(
+                    "<td><input type='text' value="+data.category_name + " /></td><td><input type='text' value=" + data.id + " /></td><td><input type='text' value=" + data.name + " /></td><td><input type='text' value=" + data.description + " /></td><td><input type='text' value=" + data.price + " /></td><td><input type='text' value=" + data.category_id+" /></td>"
+                ).appendTo('table#records_table_product_view');
+                //alert(item.category_name);
+                $('#productsingle').modal('show');
+            });
+        }
+        function product_delete(id){
+            alert("Mmmm-"+id);
+            datadel = {id: id };
+            alert(JSON.stringify(datadel));
+            $.ajax({ 
+                url: 'http://localhost/phpapi/api.php',
+                data: JSON.stringify(datadel),
+                dataType: 'JSON',
+                type: 'DELETE', 
+                contentType: "application/json; charset=utf-8",
+                success: function( res ) {
+                alert(JSON.stringify(res));
+                }
+            });
+        }
+    </script>
+</footer>
+
+</html>
